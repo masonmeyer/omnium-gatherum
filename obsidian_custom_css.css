@@ -1,0 +1,194 @@
+/* -------------------------- */
+/* LIGHT THEME VARIABLES      */
+/* -------------------------- */
+.theme-light {
+  --bold-color: #0000a0;
+  --italic-color: #6495ED;
+
+  --h1-color: #cB0000;
+  --h2-color: #ff7f00;
+  --h3-color: #f56dff;
+  --h4-color: #008000;
+  --h5-color: #008080;
+  --h6-color: #939fff;
+
+  .inline-title {
+  	color: #000000;
+  	padding-bottom: 2px;
+    border-bottom: 1px solid #000000;
+  }
+
+  --background-primary: #fffff4; /* parchment  */
+}
+
+/* -------------------------- */
+/* DARK THEME VARIABLES       */
+/* -------------------------- */
+.theme-dark {
+  --bold-color: #ff927f;
+  --italic-color: #827fff;
+
+  --h1-color: #66ccff;
+  --h2-color: #c594ff;
+  --h3-color: #ffd57e;
+  --h4-color: #ff86a9;
+  --h5-color: #ff9933;
+  --h6-color: #66cccc;
+
+  .inline-title {
+  	color: #ffffff;
+  	padding-bottom: 2px;
+    border-bottom: 1px solid #ffffff;
+  }
+
+  --background-primary: #191919;
+}
+
+/* Rounded highlights */
+span.cm-highlight, mark {
+    background-color: #f8ff88 !important;
+    padding-left: 6px;
+    padding-right: 6px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    border-radius: 6px;
+    border: 1px solid #f2b700;
+}
+
+body {
+	--bold-modifier : 300; 
+}
+
+.HyperMD-header-1::after, h1 {
+    display: block;
+    content: "";
+    padding-bottom: 2px;  
+    border-bottom: 1px solid var(--h1-color);
+}
+.HyperMD-header-2::after, h2 {
+    display: block;
+    content: "";
+    padding-bottom: 2px;  
+    border-bottom: 1px solid var(--h2-color);
+}
+.HyperMD-header-3::after, h3 {
+    display: block;
+    content: "";
+    padding-bottom: 2px;  
+    border-bottom: 1px solid var(--h3-color);
+}
+
+
+/* Bullet symbols */
+/* LEVEL 1 */
+.markdown-reading-view ul > li > .list-bullet:after,
+.markdown-source-view.mod-cm6 .HyperMD-list-line-1 .list-bullet:after {
+/* Bullet */
+height: 4px;
+width: 4px;
+border-radius: 50%;
+}
+/* LEVEL 2 */
+.markdown-reading-view ul > li > ul > li > .list-bullet:after,
+.markdown-source-view.mod-cm6 .HyperMD-list-line-2 .list-bullet:after {
+/* Hollow Bullet */
+height: 4px;
+width: 4px;
+background-color: transparent;
+border-style: solid;
+border-radius: 50%;
+border-width: 1px;
+}
+/* LEVEL 3 */
+.markdown-reading-view ul > li > ul > li > ul > li > .list-bullet:after,
+.markdown-source-view.mod-cm6 .HyperMD-list-line-3 .list-bullet:after {
+/* Solid Square */
+height: 4px;
+width: 4px;
+border-radius: 0%;
+background-color: rgb(89, 89, 89);
+}
+/* LEVEL 4 */
+.markdown-reading-view ul > li > ul > li > ul > li > ul > li >.list-bullet:after,
+.markdown-source-view.mod-cm6 .HyperMD-list-line-4 .list-bullet:after {
+/* Triangle */
+height: 0;
+width: 0;
+background-color: transparent;
+border-radius: 0%;
+border-top: 3px solid transparent;
+border-bottom: 3px solid transparent;
+border-left: 4px solid;
+border-right: 0px solid;
+}
+
+
+/* Footnotes in edit mode */
+.cm-inline-footnote:not(.cm-inline-footnote-start):not(.cm-inline-footnote-end),
+.cm-active .cm-inline-footnote-start::after {
+    display: none;
+}
+.cm-inline-footnote-start::after {
+    content:'📚*';
+    font-size: 1.25em;
+    opacity: 1;
+    position: absolute;
+    background: var(--background-primary);
+    left: 0;
+    z-index: 99;
+    width: 20px;
+}
+.cm-active .cm-inline-footnote:not(.cm-inline-footnote-start):not(.cm-inline-footnote-end) {
+    display: inline;
+}
+.cm-inline-footnote-start {
+    position: relative;
+}
+.cm-inline-footnote-start:hover + .cm-inline-footnote:not(.cm-inline-footnote-start):not(.cm-inline-footnote-end) {
+    display: inline-block;
+    position: absolute;
+    background: #e6efd8;
+    border: 1px solid #000000;
+    box-shadow: 1px 1px 1px #000000;
+    padding: 0.5rem;
+    z-index: 999;
+    left: auto;
+    top: auto;
+    margin-left: 0.5em;
+    border-radius: 6px;
+    max-width: 400px;
+}
+
+
+
+/* Folder colors */
+body {
+   --folder-color-1: #D23838; /* red */
+   --folder-color-2: #9164DD; /* purple */
+   --folder-color-3: #298ccb; /* blue */
+   --folder-color-4: #46AC79; /* green */
+   --folder-color-5: #a8a435; /* yellow */
+   --folder-color-6: #D07A40; /* orange */
+}
+ 
+.nav-files-container > div > .nav-folder:nth-child(6n + 1) { --folder-color: var(--folder-color-1); }
+.nav-files-container > div > .nav-folder:nth-child(6n + 2) { --folder-color: var(--folder-color-2); }
+.nav-files-container > div > .nav-folder:nth-child(6n + 3) { --folder-color: var(--folder-color-3); }
+.nav-files-container > div > .nav-folder:nth-child(6n + 4) { --folder-color: var(--folder-color-4); }
+.nav-files-container > div > .nav-folder:nth-child(6n + 5) { --folder-color: var(--folder-color-5); }
+.nav-files-container > div > .nav-folder:nth-child(6n + 6) { --folder-color: var(--folder-color-6); }
+ 
+.nav-files-container > div > .nav-folder {
+   border: 1px solid var(--divider-color);
+   border-left: 4px solid var(--folder-color);
+   border-radius: var(--radius-s);
+}
+ 
+.nav-files-container > div > .nav-folder + .nav-folder {
+   margin-top: var(--size-2-2);
+}
+ 
+.nav-folder-title {
+   color: var(--folder-color);
+   font-weight: var(--font-bold);
+}
