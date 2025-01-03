@@ -106,7 +106,6 @@ border-width: 1px;
 height: 4px;
 width: 4px;
 border-radius: 0%;
-background-color: rgb(89, 89, 89);
 }
 /* LEVEL 4 */
 .markdown-reading-view ul > li > ul > li > ul > li > ul > li >.list-bullet:after,
