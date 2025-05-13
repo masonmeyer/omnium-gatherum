@@ -22,5 +22,4 @@ setopt PROMPT_SUBST
 export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced
 
-# PROMPT='%B%F{0}%K{229}%n@%m %1~ %#%f%k%b '
-PROMPT='%B%F{96}%K{229}$(prompt_dir) %F{22}$(git_branch_name)%F{96}❯%f%k%b '
+PROMPT='%B%K{229}%F{27}%D{%m-%d %H:%M} %F{96}$(prompt_dir) %F{22}$(git_branch_name)%F{96}❯%f%k%b '
